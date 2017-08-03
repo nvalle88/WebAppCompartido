@@ -1,0 +1,59 @@
+@model IEnumerable<ds.core.entities.OpcionMenu>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Administraci&oacute;n de men&uacute;</h2>
+
+<p>
+    <a asp-action="Create">Crear</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Texto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Glyph)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Url)
+                </th>
+            <th>
+                Opci&oacute;n Superior
+            </th>
+            <th>
+                Rol
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Texto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Glyph)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Url)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParentMenuOption.Texto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Role.Name)
+            </td>
+            <td>
+                <a asp-action="Create" asp-route-id="@item.OpcionMenuId">Crear sub-opci&oacute;n</a> |
+                <a asp-action="Edit" asp-route-id="@item.OpcionMenuId">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.OpcionMenuId">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

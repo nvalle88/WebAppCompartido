@@ -7,9 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bd.webappcompartido.entidad
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bd.sw.externos", "bd.webappcompartido.externos\bd.sw.externos.csproj", "{238ED73C-EDF7-46E3-8805-3A4270BA2EA1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bd.webappcompartido.web", "bd.webappcompartido.web\bd.webappcompartido.web.csproj", "{2D724AB1-51EC-42B3-8D69-F3DF22CD2DA3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bd.webappcompartido.servicios", "bd.webappcompartido.servicios\bd.webappcompartido.servicios.csproj", "{6AF6F430-B1BE-42BD-9ADF-18BEFF941FF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bd.webappcompartido.servicios", "bd.webappcompartido.servicios\bd.webappcompartido.servicios.csproj", "{6AF6F430-B1BE-42BD-9ADF-18BEFF941FF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +23,6 @@ Global
 		{238ED73C-EDF7-46E3-8805-3A4270BA2EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{238ED73C-EDF7-46E3-8805-3A4270BA2EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{238ED73C-EDF7-46E3-8805-3A4270BA2EA1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2D724AB1-51EC-42B3-8D69-F3DF22CD2DA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D724AB1-51EC-42B3-8D69-F3DF22CD2DA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D724AB1-51EC-42B3-8D69-F3DF22CD2DA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D724AB1-51EC-42B3-8D69-F3DF22CD2DA3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6AF6F430-B1BE-42BD-9ADF-18BEFF941FF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6AF6F430-B1BE-42BD-9ADF-18BEFF941FF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AF6F430-B1BE-42BD-9ADF-18BEFF941FF6}.Release|Any CPU.ActiveCfg = Release|Any CPU

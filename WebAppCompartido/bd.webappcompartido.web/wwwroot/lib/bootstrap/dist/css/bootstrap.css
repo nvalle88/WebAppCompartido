@@ -945,7 +945,7 @@ th {
 .glyphicon-duplicate:before {
   content: "\e224";
 }
-.glyphicon-piggy-bank:before {
+.glyphicon-piggy-Banco:before {
   content: "\e225";
 }
 .glyphicon-scissors:before {
@@ -1522,7 +1522,7 @@ blockquote.pull-right small:after,
 blockquote.pull-right .small:after {
   content: '\00A0 \2014';
 }
-address {
+Direccion {
   margin-bottom: 20px;
   font-style: normal;
   line-height: 1.42857143;

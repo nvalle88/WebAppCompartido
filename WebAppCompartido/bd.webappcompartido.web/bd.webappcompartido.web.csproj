@@ -2,36 +2,50 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
+    <PackageTargetFallback>portable-net45+win8</PackageTargetFallback>
+    <UserSecretsId>e7fa028f-2d4b-4fe9-b481-57faa9f09fad</UserSecretsId>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81;</PackageTargetFallback>
-  </PropertyGroup>
   <ItemGroup>
+    <Content Include="wwwroot\ajax\notify\mail.cshtml" />
+    <Content Include="wwwroot\ajax\notify\mail.html" />
+    <Content Include="wwwroot\images\bg-abstract.png" />
+    <Content Include="wwwroot\img\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="2.4.337" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.3" />
-    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="1.1.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="1.1.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.1.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.2" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.2" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.2" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection.Extensions" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="1.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="1.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="1.0.0-rc3" />
   </ItemGroup>
   <ItemGroup>
-    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\API\" />
-    <Folder Include="Controllers\API\" />
-    <Folder Include="Controllers\API\" />
-    <Folder Include="Controllers\MVC\" />
+    <ProjectReference Include="..\ds.core.data\ds.core.data.csproj" />
+    <ProjectReference Include="..\ds.core.entities\ds.core.entities.csproj" />
+    <ProjectReference Include="..\ds.core.services\ds.core.services.csproj" />
+    <ProjectReference Include="..\ds.core.web.shared\ds.core.web.shared.csproj" />
+    <ProjectReference Include="..\ds.zeus.data\ds.zeus.data.csproj" />
+    <ProjectReference Include="..\ds.zeus.entities\ds.zeus.entities.csproj" />
+    <ProjectReference Include="..\ds.zeus.services\ds.zeus.services.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\bd.webappcompartido.entidades\bd.webappcompartido.entidades.csproj" />
-    <ProjectReference Include="..\bd.webappcompartido.externos\bd.sw.externos.csproj" />
+    <Folder Include="Content\Employees\" />
+    <Folder Include="Content\Employees\" />
+    <Folder Include="Controllers\Api\" />
   </ItemGroup>
 
 </Project>

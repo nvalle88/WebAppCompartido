@@ -78,7 +78,7 @@ $.validator.addMethod("alphanumeric", function(value, element) {
 }, "Letters, numbers, and underscores only please");
 
 /*
- * Dutch bank account numbers (not 'giro' numbers) have 9 digits
+ * Dutch Banco account numbers (not 'giro' numbers) have 9 digits
  * and pass the '11 check'.
  * We accept the notation with spaces, as that is common.
  * acceptable: 123456789 or 12 34 56 789
@@ -101,13 +101,13 @@ $.validator.addMethod("bankaccountNL", function(value, element) {
 		sum = sum + factor * digit;
 	}
 	return sum % 11 === 0;
-}, "Please specify a valid bank account number");
+}, "Please specify a valid Banco account number");
 
 $.validator.addMethod("bankorgiroaccountNL", function(value, element) {
 	return this.optional(element) ||
 			($.validator.methods.bankaccountNL.call(this, value, element)) ||
 			($.validator.methods.giroaccountNL.call(this, value, element));
-}, "Please specify a valid bank or giro account number");
+}, "Please specify a valid Banco or giro account number");
 
 /**
  * BIC is the business identifier code (ISO 9362). This BIC check is not a guarantee for authenticity.
@@ -115,9 +115,9 @@ $.validator.addMethod("bankorgiroaccountNL", function(value, element) {
  * BIC pattern: BBBBCCLLbbb (8 or 11 characters long; bbb is optional)
  *
  * BIC definition in detail:
- * - First 4 characters - bank code (only letters)
+ * - First 4 characters - Banco code (only letters)
  * - Next 2 characters - ISO 3166-1 alpha-2 country code (only letters)
- * - Next 2 characters - location code (letters and digits)
+ * - Next 2 characters - Localizacion code (letters and digits)
  *   a. shall not start with '0' or '1'
  *   b. second character must be a letter ('O' is not allowed) or one of the following digits ('0' for test (therefore not allowed), '1' for passive participant and '2' for active participant)
  * - Last 3 characters - branch code, optional (shall not start with 'X' except in case of 'XXX' for primary office) (letters and digits)
@@ -413,14 +413,14 @@ $.validator.addMethod("extension", function(value, element, param) {
 }, $.validator.format("Please enter a value with a valid extension."));
 
 /**
- * Dutch giro account numbers (not bank numbers) have max 7 digits
+ * Dutch giro account numbers (not Banco numbers) have max 7 digits
  */
 $.validator.addMethod("giroaccountNL", function(value, element) {
 	return this.optional(element) || /^[0-9]{1,7}$/.test(value);
 }, "Please specify a valid giro account number");
 
 /**
- * IBAN is the international bank account number.
+ * IBAN is the international Banco account number.
  * It has a country - specific format, that is checked here too
  */
 $.validator.addMethod("iban", function(value, element) {
@@ -548,11 +548,11 @@ $.validator.addMethod("integer", function(value, element) {
 
 $.validator.addMethod("ipv4", function(value, element) {
 	return this.optional(element) || /^(25[0-5]|2[0-4]\d|[01]?\d\d?)\.(25[0-5]|2[0-4]\d|[01]?\d\d?)\.(25[0-5]|2[0-4]\d|[01]?\d\d?)\.(25[0-5]|2[0-4]\d|[01]?\d\d?)$/i.test(value);
-}, "Please enter a valid IP v4 address.");
+}, "Please enter a valid IP v4 Direccion.");
 
 $.validator.addMethod("ipv6", function(value, element) {
 	return this.optional(element) || /^((([0-9A-Fa-f]{1,4}:){7}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){6}:[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){5}:([0-9A-Fa-f]{1,4}:)?[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){4}:([0-9A-Fa-f]{1,4}:){0,2}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){3}:([0-9A-Fa-f]{1,4}:){0,3}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){2}:([0-9A-Fa-f]{1,4}:){0,4}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){6}((\b((25[0-5])|(1\d{2})|(2[0-4]\d)|(\d{1,2}))\b)\.){3}(\b((25[0-5])|(1\d{2})|(2[0-4]\d)|(\d{1,2}))\b))|(([0-9A-Fa-f]{1,4}:){0,5}:((\b((25[0-5])|(1\d{2})|(2[0-4]\d)|(\d{1,2}))\b)\.){3}(\b((25[0-5])|(1\d{2})|(2[0-4]\d)|(\d{1,2}))\b))|(::([0-9A-Fa-f]{1,4}:){0,5}((\b((25[0-5])|(1\d{2})|(2[0-4]\d)|(\d{1,2}))\b)\.){3}(\b((25[0-5])|(1\d{2})|(2[0-4]\d)|(\d{1,2}))\b))|([0-9A-Fa-f]{1,4}::([0-9A-Fa-f]{1,4}:){0,5}[0-9A-Fa-f]{1,4})|(::([0-9A-Fa-f]{1,4}:){0,6}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){1,7}:))$/i.test(value);
-}, "Please enter a valid IP v6 address.");
+}, "Please enter a valid IP v6 Direccion.");
 
 $.validator.addMethod("lettersonly", function(value, element) {
 	return this.optional(element) || /^[a-z]+$/i.test(value);

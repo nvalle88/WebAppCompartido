@@ -1,0 +1,64 @@
+@inject ds.core.services.Interfaces.IMenuServicio menuServicio
+@{
+    var roles = User.Claims.Where(p => p.Type == System.Security.Claims.ClaimTypes.Role);
+    var menuItems = menuServicio.ObtenerMenu(roles);
+}
+<!-- NAVIGATION : This navigation is also responsive
+
+    To make this navigation dynamic please make sure to link the node
+    (the reference to the nav > ul) after page load. Or the navigation
+    will not initialize.
+    -->
+<nav style="font-size:small">
+    <ul>
+        @if(User.IsInRole("Admin"))
+        {
+            <li>
+                <a href="#" style="font-size:12px"><i class="fa fa-lg fa-fw fa-gear txt-color-blue"></i> <span class="menu-item-parent">Administraci&oacute;n</span></a>
+                <ul>
+                    <li>
+                        <a href="/UsersAdmin" style="font-size:11px">Usuarios</a>
+                    </li>
+                    <li>
+                        <a href="/RolesAdmin" style="font-size:11px">Roles</a>
+                    </li>
+                    <li>
+                        <a href="/MenuOpciones" style="font-size:11px">Men&uacute; de Opciones</a>
+                    </li>
+                </ul>
+            </li>
+        }
+        <li>
+            <a href="#" style="font-size:12px"><i class="fa fa-lg fa-fw fa-home txt-color-blue"></i> <span class="menu-item-parent">Inicio</span></a>
+            <ul>
+                <li>
+                    <a href="@Url.Action("index", "Home")" style="font-size:11px">Acerca de</a>
+                </li>                       
+            </ul>
+        </li>
+    @foreach (var nivel1 in menuItems.Where(p=>p.ParentId == null))
+    {
+        <li>
+            <a href="@nivel1.Url" style="font-size:12px"><i class="fa fa-lg fa-fw @nivel1.Glyph txt-color-blue"></i> <span class="menu-item-parent">@nivel1.Texto</span></a>
+            <ul>  
+                @foreach (var nivel2 in menuItems.Where(p=>p.ParentId == nivel1.OpcionMenuId))
+                {
+                    <li >
+                        @Html.ActionLink(nivel2.Texto, "Index",nivel2.Url, new { url = nivel2.Url, accion="Index" })
+                       
+                        <ul>
+                            @foreach (var nivel3 in menuItems.Where(p => p.ParentId == nivel2.OpcionMenuId))
+                            {
+                                <li >
+                                    <a href="@nivel3.Url" style="font-size:12px" ><i class="fa fa-lg fa-fw @nivel3.Glyph txt-color-blue"></i> <span class="menu-item-parent">@nivel3.Texto</span></a>
+
+                                </li>
+                            }
+                        </ul>
+                    </li>
+                }
+            </ul>
+        </li>
+    }
+    </ul>
+</nav>

@@ -1,0 +1,31 @@
+﻿@inject UserManager<ApplicationUser> UserManager
+@inject IMemoryCache _cache
+@using Microsoft.Extensions.Caching.Memory;
+@{
+
+    ApplicationUser user;
+    string cacheKey = $"USER_NAME_KEY_{User.Identity.Name}";
+
+    // Look for cache key.
+    if (!_cache.TryGetValue(cacheKey, out user))
+    {
+        // Key not in cache, so get data.
+        user = await UserManager.FindByNameAsync(User.Identity.Name);
+
+        // Set cache options.
+        var cacheEntryOptions = new MemoryCacheEntryOptions()
+            // Keep in cache for this time, reset time if accessed.
+            .SetSlidingExpiration(TimeSpan.FromMinutes(10));
+
+        // Save data in cache.
+        _cache.Set(cacheKey, user, cacheEntryOptions);
+    }
+}
+<div class="login-info">
+    <span>
+        <a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
+            <img src="~/img/avatars/male.png" alt="me" class="online" />
+            <span>@user?.UserFirstName @user?.UserLastName</span>
+        </a>
+    </span>
+</div>

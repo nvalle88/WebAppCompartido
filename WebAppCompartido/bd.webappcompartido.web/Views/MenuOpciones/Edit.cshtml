@@ -1,0 +1,59 @@
+@model ds.core.entities.OpcionMenu
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>Editar Opci&oacute;n Men&uacute;</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="OpcionMenuId" />
+        <div class="form-group">
+            <label asp-for="Texto" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Texto" class="form-control" />
+                <span asp-validation-for="Texto" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Glyph" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Glyph" class="form-control" />
+                <span asp-validation-for="Glyph" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Url" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Url" class="form-control" />
+                <span asp-validation-for="Url" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Rol</label>
+            <div class="col-md-10">
+                <select asp-for="RoleId" class="form-control" asp-items="ViewBag.RoleId"></select>
+                <span asp-validation-for="RoleId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Opci&oacute;n Superior</label>
+            <div class="col-md-10">
+                @Html.DropDownListFor(m => m.ParentId, (SelectList)ViewBag.ParentId, "<Ninguna>", new { @class = "form-control" })
+                <span asp-validation-for="ParentId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Guardar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Regresar</a>
+</div>
+

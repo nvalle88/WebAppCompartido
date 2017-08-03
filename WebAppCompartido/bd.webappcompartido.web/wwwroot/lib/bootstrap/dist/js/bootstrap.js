@@ -811,11 +811,11 @@ if (typeof jQuery === 'undefined') {
     if ($this.is('.disabled, :disabled')) return
 
     var $parent  = getParent($this)
-    var isActive = $parent.hasClass('open')
+    var esActivo = $parent.hasClass('open')
 
     clearMenus()
 
-    if (!isActive) {
+    if (!esActivo) {
       if ('ontouchstart' in document.documentElement && !$parent.closest('.navbar-nav').length) {
         // if mobile we use a backdrop because click events don't delegate
         $(document.createElement('div'))
@@ -852,9 +852,9 @@ if (typeof jQuery === 'undefined') {
     if ($this.is('.disabled, :disabled')) return
 
     var $parent  = getParent($this)
-    var isActive = $parent.hasClass('open')
+    var esActivo = $parent.hasClass('open')
 
-    if (!isActive && e.which != 27 || isActive && e.which == 27) {
+    if (!esActivo && e.which != 27 || esActivo && e.which == 27) {
       if (e.which == 27) $parent.find(toggle).trigger('focus')
       return $this.trigger('click')
     }

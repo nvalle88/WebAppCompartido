@@ -1,0 +1,32 @@
+﻿@model ApplicationRole
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete.</h2>
+
+<h3>¿Seguro que quieres borrar este Rol? </h3>
+<p>La eliminación de este Rol eliminará todos los usuarios de este Rol. No se eliminarán los usuarios.</p>
+<div>
+    <h4>Role.</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,53 @@
+@model ds.core.entities.OpcionMenu
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Est&aacute; seguro de eliminar?</h3>
+<div>
+    <h4>Opci&oacute;n Men&uacute;</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="OpcionMenuId" />
+        <dt>
+            @Html.DisplayNameFor(model => model.Texto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Texto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Glyph)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Glyph)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Url)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Url)
+        </dd>
+        <dt>
+            Opci&oacute;n Superior
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ParentMenuOption.Texto)
+        </dd>
+        <dt>
+            Rol
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Role.Name)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            <a asp-action="Index">Regresar</a>
+        </div>
+    </form>
+</div>
