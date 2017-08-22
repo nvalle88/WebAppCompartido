@@ -1,5 +1,5 @@
 /**
- * IBAN is the international Banco account number.
+ * IBAN is the international bank account number.
  * It has a country - specific format, that is checked here too
  */
 $.validator.addMethod("iban", function(value, element) {

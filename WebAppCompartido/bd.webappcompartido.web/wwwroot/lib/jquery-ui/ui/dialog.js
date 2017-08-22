@@ -312,9 +312,9 @@ return $.widget( "ui.dialog", {
 	_keepFocus: function( event ) {
 		function checkFocus() {
 			var activeElement = this.document[0].activeElement,
-				esActivo = this.uiDialog[0] === activeElement ||
+				isActive = this.uiDialog[0] === activeElement ||
 					$.contains( this.uiDialog[0], activeElement );
-			if ( !esActivo ) {
+			if ( !isActive ) {
 				this._focusTabbable();
 			}
 		}

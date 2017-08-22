@@ -49,7 +49,7 @@ return $.widget("ui.sortable", $.ui.mouse, {
 		scroll: true,
 		scrollSensitivity: 20,
 		scrollSpeed: 20,
-		Alcance: "default",
+		scope: "default",
 		tolerance: "intersect",
 		zIndex: 1000,
 
@@ -1178,7 +1178,7 @@ return $.widget("ui.sortable", $.ui.mouse, {
 		//Various things done here to improve the performance:
 		// 1. we create a setTimeout, that calls refreshPositions
 		// 2. on the instance, we have a counter variable, that get's higher after every append
-		// 3. on the local Alcance, we copy the counter variable, and check in the timeout, if it's still the same
+		// 3. on the local scope, we copy the counter variable, and check in the timeout, if it's still the same
 		// 4. this lets only the last addition to the timeout stack through
 		this.counter = this.counter ? ++this.counter : 1;
 		var counter = this.counter;

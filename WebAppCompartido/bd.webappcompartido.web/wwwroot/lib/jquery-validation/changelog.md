@@ -28,7 +28,7 @@
   * Update link in comment for Luhn algorithm
 
 ## Additionals
-  * Update dateITA to Direccion timezone issue
+  * Update dateITA to address timezone issue
   * Fix extension method to only method period
   * Fix accept method to match period only
   * Update time method to allow single digit hour
@@ -478,7 +478,7 @@
 * Fixed email validation to allow long top level domains (eg. ".travel")
 * Moved showErrors() from valid() to form()
 * Added validator.size(): returns the number of current errors
-* Call submitHandler with validator as Alcance for easier access of it's methods, eg. to find error labels using errorsFor(Element)
+* Call submitHandler with validator as scope for easier access of it's methods, eg. to find error labels using errorsFor(Element)
 * Compatible with jQuery 1.1.x and 1.2.x
 
 1.1

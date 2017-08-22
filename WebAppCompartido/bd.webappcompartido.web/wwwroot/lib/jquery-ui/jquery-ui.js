@@ -5495,7 +5495,7 @@ $.extend(Datepicker.prototype, {
 				thead = (showWeek ? "<th class='ui-datepicker-week-col'>" + this._get(inst, "weekHeader") + "</th>" : "");
 				for (dow = 0; dow < 7; dow++) { // days of the week
 					day = (dow + firstDay) % 7;
-					thead += "<th Alcance='col'" + ((dow + firstDay + 6) % 7 >= 5 ? " class='ui-datepicker-week-end'" : "") + ">" +
+					thead += "<th scope='col'" + ((dow + firstDay + 6) % 7 >= 5 ? " class='ui-datepicker-week-end'" : "") + ">" +
 						"<span title='" + dayNames[day] + "'>" + dayNamesMin[day] + "</span></th>";
 				}
 				calender += thead + "</tr></thead><tbody>";
@@ -5867,7 +5867,7 @@ $.widget("ui.draggable", $.ui.mouse, {
 		refreshPositions: false,
 		revert: false,
 		revertDuration: 500,
-		Alcance: "default",
+		scope: "default",
 		scroll: true,
 		scrollSensitivity: 20,
 		scrollSpeed: 20,
@@ -6659,7 +6659,7 @@ $.ui.plugin.add( "draggable", "connectToSortable", {
 					draggable.dropped = sortable.element;
 
 					// Need to refreshPositions of all sortables in the case that
-					// adding to one sortable changes the Localizacion of the other sortables (#9675)
+					// adding to one sortable changes the location of the other sortables (#9675)
 					$.each( draggable.sortables, function() {
 						this.refreshPositions();
 					});
@@ -6714,7 +6714,7 @@ $.ui.plugin.add( "draggable", "connectToSortable", {
 					draggable.dropped = false;
 
 					// Need to refreshPositions of all sortables just in case removing
-					// from one sortable changes the Localizacion of other sortables (#9675)
+					// from one sortable changes the location of other sortables (#9675)
 					$.each( draggable.sortables, function() {
 						this.refreshPositions();
 					});
@@ -8385,9 +8385,9 @@ var dialog = $.widget( "ui.dialog", {
 	_keepFocus: function( event ) {
 		function checkFocus() {
 			var activeElement = this.document[0].activeElement,
-				esActivo = this.uiDialog[0] === activeElement ||
+				isActive = this.uiDialog[0] === activeElement ||
 					$.contains( this.uiDialog[0], activeElement );
-			if ( !esActivo ) {
+			if ( !isActive ) {
 				this._focusTabbable();
 			}
 		}
@@ -8968,7 +8968,7 @@ $.widget( "ui.droppable", {
 		addClasses: true,
 		greedy: false,
 		hoverClass: false,
-		Alcance: "default",
+		scope: "default",
 		tolerance: "intersect",
 
 		// callbacks
@@ -9006,16 +9006,16 @@ $.widget( "ui.droppable", {
 			}
 		};
 
-		this._addToManager( o.Alcance );
+		this._addToManager( o.scope );
 
 		o.addClasses && this.element.addClass( "ui-droppable" );
 
 	},
 
-	_addToManager: function( Alcance ) {
+	_addToManager: function( scope ) {
 		// Add the reference and positions to the manager
-		$.ui.ddmanager.droppables[ Alcance ] = $.ui.ddmanager.droppables[ Alcance ] || [];
-		$.ui.ddmanager.droppables[ Alcance ].push( this );
+		$.ui.ddmanager.droppables[ scope ] = $.ui.ddmanager.droppables[ scope ] || [];
+		$.ui.ddmanager.droppables[ scope ].push( this );
 	},
 
 	_splice: function( drop ) {
@@ -9028,7 +9028,7 @@ $.widget( "ui.droppable", {
 	},
 
 	_destroy: function() {
-		var drop = $.ui.ddmanager.droppables[ this.options.Alcance ];
+		var drop = $.ui.ddmanager.droppables[ this.options.scope ];
 
 		this._splice( drop );
 
@@ -9041,8 +9041,8 @@ $.widget( "ui.droppable", {
 			this.accept = $.isFunction( value ) ? value : function( d ) {
 				return d.is( value );
 			};
-		} else if ( key === "Alcance" ) {
-			var drop = $.ui.ddmanager.droppables[ this.options.Alcance ];
+		} else if ( key === "scope" ) {
+			var drop = $.ui.ddmanager.droppables[ this.options.scope ];
 
 			this._splice( drop );
 			this._addToManager( value );
@@ -9122,7 +9122,7 @@ $.widget( "ui.droppable", {
 			if (
 				inst.options.greedy &&
 				!inst.options.disabled &&
-				inst.options.Alcance === draggable.options.Alcance &&
+				inst.options.scope === draggable.options.scope &&
 				inst.accept.call( inst.element[ 0 ], ( draggable.currentItem || draggable.element ) ) &&
 				$.ui.intersect( draggable, $.extend( inst, { offset: inst.element.offset() } ), inst.options.tolerance, event )
 			) { childrenIntersection = true; return false; }
@@ -9212,7 +9212,7 @@ $.ui.ddmanager = {
 	prepareOffsets: function( t, event ) {
 
 		var i, j,
-			m = $.ui.ddmanager.droppables[ t.options.Alcance ] || [],
+			m = $.ui.ddmanager.droppables[ t.options.scope ] || [],
 			type = event ? event.type : null, // workaround for #2317
 			list = ( t.currentItem || t.element ).find( ":data(ui-droppable)" ).addBack();
 
@@ -9251,7 +9251,7 @@ $.ui.ddmanager = {
 
 		var dropped = false;
 		// Create a copy of the droppables in case the list changes during the drop (#9116)
-		$.each( ( $.ui.ddmanager.droppables[ draggable.options.Alcance ] || [] ).slice(), function() {
+		$.each( ( $.ui.ddmanager.droppables[ draggable.options.scope ] || [] ).slice(), function() {
 
 			if ( !this.options ) {
 				return;
@@ -9286,13 +9286,13 @@ $.ui.ddmanager = {
 		}
 
 		// Run through all droppables and check their positions based on specific tolerance options
-		$.each( $.ui.ddmanager.droppables[ draggable.options.Alcance ] || [], function() {
+		$.each( $.ui.ddmanager.droppables[ draggable.options.scope ] || [], function() {
 
 			if ( this.options.disabled || this.greedyChild || !this.visible ) {
 				return;
 			}
 
-			var parentInstance, Alcance, parent,
+			var parentInstance, scope, parent,
 				intersects = $.ui.intersect( draggable, this, this.options.tolerance, event ),
 				c = !intersects && this.isover ? "isout" : ( intersects && !this.isover ? "isover" : null );
 			if ( !c ) {
@@ -9300,10 +9300,10 @@ $.ui.ddmanager = {
 			}
 
 			if ( this.options.greedy ) {
-				// find droppable parents with same Alcance
-				Alcance = this.options.Alcance;
+				// find droppable parents with same scope
+				scope = this.options.scope;
 				parent = this.element.parents( ":data(ui-droppable)" ).filter(function() {
-					return $( this ).droppable( "instance" ).options.Alcance === Alcance;
+					return $( this ).droppable( "instance" ).options.scope === scope;
 				});
 
 				if ( parent.length ) {
@@ -13520,7 +13520,7 @@ var sortable = $.widget("ui.sortable", $.ui.mouse, {
 		scroll: true,
 		scrollSensitivity: 20,
 		scrollSpeed: 20,
-		Alcance: "default",
+		scope: "default",
 		tolerance: "intersect",
 		zIndex: 1000,
 
@@ -14649,7 +14649,7 @@ var sortable = $.widget("ui.sortable", $.ui.mouse, {
 		//Various things done here to improve the performance:
 		// 1. we create a setTimeout, that calls refreshPositions
 		// 2. on the instance, we have a counter variable, that get's higher after every append
-		// 3. on the local Alcance, we copy the counter variable, and check in the timeout, if it's still the same
+		// 3. on the local scope, we copy the counter variable, and check in the timeout, if it's still the same
 		// 4. this lets only the last addition to the timeout stack through
 		this.counter = this.counter ? ++this.counter : 1;
 		var counter = this.counter;
@@ -14921,8 +14921,8 @@ var spinner = $.widget( "ui.spinner", {
 			previous = this.element[0] === this.document[0].activeElement ?
 				this.previous : this.element.val();
 			function checkFocus() {
-				var esActivo = this.element[0] === this.document[0].activeElement;
-				if ( !esActivo ) {
+				var isActive = this.element[0] === this.document[0].activeElement;
+				if ( !isActive ) {
 					this.element.focus();
 					this.previous = previous;
 					// support: IE
@@ -15324,7 +15324,7 @@ var tabs = $.widget( "ui.tabs", {
 			anchor = anchor.cloneNode( false );
 
 			anchorUrl = anchor.href.replace( rhash, "" );
-			locationUrl = Localizacion.href.replace( rhash, "" );
+			locationUrl = location.href.replace( rhash, "" );
 
 			// decoding may throw an error if the URL isn't UTF-8 (#9518)
 			try {
@@ -15378,7 +15378,7 @@ var tabs = $.widget( "ui.tabs", {
 	_initialActive: function() {
 		var active = this.options.active,
 			collapsible = this.options.collapsible,
-			locationHash = Localizacion.hash.substring( 1 );
+			locationHash = location.hash.substring( 1 );
 
 		if ( active === null ) {
 			// check the fragment identifier in the URL

@@ -29,5 +29,5 @@ $.extend($.validator.messages, {
 	postalcodeNL: "Vul hier een geldige postcode in.",
 	bankaccountNL: "Vul hier een geldig bankrekeningnummer in.",
 	giroaccountNL: "Vul hier een geldig gironummer in.",
-	bankorgiroaccountNL: "Vul hier een geldig Banco- of gironummer in."
+	bankorgiroaccountNL: "Vul hier een geldig bank- of gironummer in."
 });

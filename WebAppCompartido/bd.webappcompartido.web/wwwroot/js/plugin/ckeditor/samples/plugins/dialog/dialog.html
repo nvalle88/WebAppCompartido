@@ -40,7 +40,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 					// We need to do the following trick to find out the dialog
 					// definition file URL path. In the real world, you would simply
 					// point to an absolute path directly, like "/mydir/mydialog.js".
-					var href = document.Localizacion.href.split( '/' );
+					var href = document.location.href.split( '/' );
 					href.pop();
 					href.push( 'assets/my_dialog.js' );
 					href = href.join( '/' );

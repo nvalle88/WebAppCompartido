@@ -102,11 +102,11 @@ program will individually obtain patent licenses, in effect making the
 program proprietary.  To prevent this, we have made it clear that any
 patent must be licensed for everyone's free use or not licensed at all.
 
-  The precise terms and conditions for copying, Distributivo and
+  The precise terms and conditions for copying, distribution and
 modification follow.
 
 GNU GENERAL PUBLIC LICENSE
-TERMS AND CONDITIONS FOR COPYING, Distributivo AND MODIFICATION
+TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
   0. This License applies to any program or other work which contains
 a notice placed by the copyright holder saying it may be distributed
@@ -118,8 +118,8 @@ either verbatim or with modifications and/or translated into another
 language.  (Hereinafter, translation is included without limitation in
 the term "modification".)  Each licensee is addressed as "you".
 
-Activities other than copying, Distributivo and modification are not
-covered by this License; they are outside its Alcance.  The act of
+Activities other than copying, distribution and modification are not
+covered by this License; they are outside its scope.  The act of
 running the Program is not restricted, and the output from the Program
 is covered only if its contents constitute a work based on the
 Program (independent of having been made by running the Program).
@@ -166,19 +166,19 @@ and can be reasonably considered independent and separate works in
 themselves, then this License, and its terms, do not apply to those
 sections when you distribute them as separate works.  But when you
 distribute the same sections as part of a whole which is a work based
-on the Program, the Distributivo of the whole must be on the terms of
+on the Program, the distribution of the whole must be on the terms of
 this License, whose permissions for other licensees extend to the
 entire whole, and thus to each and every part regardless of who wrote it.
 
 Thus, it is not the intent of this section to claim rights or contest
 your rights to work written entirely by you; rather, the intent is to
-exercise the right to control the Distributivo of derivative or
+exercise the right to control the distribution of derivative or
 collective works based on the Program.
 
 In addition, mere aggregation of another work not based on the Program
 with the Program (or with a work based on the Program) on a volume of
-a storage or Distributivo medium does not bring the other work under
-the Alcance of this License.
+a storage or distribution medium does not bring the other work under
+the scope of this License.
 
   3. You may copy and distribute the Program (or a work based on it,
 under Section 2) in object code or executable form under the terms of
@@ -190,14 +190,14 @@ Sections 1 and 2 above provided that you also do one of the following:
 
     b) Accompany it with a written offer, valid for at least three
     years, to give any third party, for a charge no more than your
-    cost of physically performing source Distributivo, a complete
+    cost of physically performing source distribution, a complete
     machine-readable copy of the corresponding source code, to be
     distributed under the terms of Sections 1 and 2 above on a medium
     customarily used for software interchange; or,
 
     c) Accompany it with the information you received as to the offer
     to distribute corresponding source code.  (This alternative is
-    allowed only for noncommercial Distributivo and only if you
+    allowed only for noncommercial distribution and only if you
     received the program in object code or executable form with such
     an offer, in accord with Subsection b above.)
 
@@ -212,10 +212,10 @@ form) with the major components (compiler, kernel, and so on) of the
 operating system on which the executable runs, unless that component
 itself accompanies the executable.
 
-If Distributivo of executable or object code is made by offering
+If distribution of executable or object code is made by offering
 access to copy from a designated place, then offering equivalent
 access to copy the source code from the same place counts as
-Distributivo of the source code, even though third parties are not
+distribution of the source code, even though third parties are not
 compelled to copy the source along with the object code.
 
   4. You may not copy, modify, sublicense, or distribute the Program
@@ -254,7 +254,7 @@ may not distribute the Program at all.  For example, if a patent
 license would not permit royalty-free redistribution of the Program by
 all those who receive copies directly or indirectly through you, then
 the only way you could satisfy both it and this License would be to
-refrain entirely from Distributivo of the Program.
+refrain entirely from distribution of the Program.
 
 If any portion of this section is held invalid or unenforceable under
 any particular circumstance, the balance of the section is intended to
@@ -264,7 +264,7 @@ circumstances.
 It is not the purpose of this section to induce you to infringe any
 patents or other property right claims or to contest validity of any
 such claims; this section has the sole purpose of protecting the
-integrity of the free software Distributivo system, which is
+integrity of the free software distribution system, which is
 implemented by public license practices.  Many people have made
 generous contributions to the wide range of software distributed
 through that system in reliance on consistent application of that
@@ -275,18 +275,18 @@ impose that choice.
 This section is intended to make thoroughly clear what is believed to
 be a consequence of the rest of this License.
 
-  8. If the Distributivo and/or use of the Program is restricted in
+  8. If the distribution and/or use of the Program is restricted in
 certain countries either by patents or by copyrighted interfaces, the
 original copyright holder who places the Program under this License
-may add an explicit geographical Distributivo limitation excluding
-those countries, so that Distributivo is permitted only in or among
+may add an explicit geographical distribution limitation excluding
+those countries, so that distribution is permitted only in or among
 countries not thus excluded.  In such case, this License incorporates
 the limitation as if written in the body of this License.
 
   9. The Free Software Foundation may publish revised and/or new versions
 of the General Public License from time to time.  Such new versions will
 be similar in spirit to the present version, but may differ in detail to
-Direccion new problems or concerns.
+address new problems or concerns.
 
 Each version is given a distinguishing version number.  If the Program
 specifies a version number of this License which applies to it and "any
@@ -297,7 +297,7 @@ this License, you may choose any version ever published by the Free Software
 Foundation.
 
   10. If you wish to incorporate parts of the Program into other free
-programs whose Distributivo conditions are different, write to the author
+programs whose distribution conditions are different, write to the author
 to ask for permission.  For software which is copyrighted by the Free
 Software Foundation, write to the Free Software Foundation; we sometimes
 make exceptions for this.  Our decision will be guided by the two goals
@@ -440,14 +440,14 @@ users' freedom, it does ensure that the user of a program that is
 linked with the Library has the freedom and the wherewithal to run
 that program using a modified version of the Library.
 
-  The precise terms and conditions for copying, Distributivo and
+  The precise terms and conditions for copying, distribution and
 modification follow.  Pay close attention to the difference between a
 "work based on the library" and a "work that uses the library".  The
 former contains code derived from the library, whereas the latter must
 be combined with the library in order to run.
 
 GNU LESSER GENERAL PUBLIC LICENSE
-TERMS AND CONDITIONS FOR COPYING, Distributivo AND MODIFICATION
+TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
   0. This License Agreement applies to any software library or other
 program which contains a notice placed by the copyright holder or
@@ -473,8 +473,8 @@ all the source code for all modules it contains, plus any associated
 interface definition files, plus the scripts used to control compilation
 and installation of the library.
 
-  Activities other than copying, Distributivo and modification are not
-covered by this License; they are outside its Alcance.  The act of
+  Activities other than copying, distribution and modification are not
+covered by this License; they are outside its scope.  The act of
 running a program using the Library is not restricted, and output from
 such a program is covered only if its contents constitute a work based
 on the Library (independent of the use of the Library in a tool for
@@ -527,20 +527,20 @@ and can be reasonably considered independent and separate works in
 themselves, then this License, and its terms, do not apply to those
 sections when you distribute them as separate works.  But when you
 distribute the same sections as part of a whole which is a work based
-on the Library, the Distributivo of the whole must be on the terms of
+on the Library, the distribution of the whole must be on the terms of
 this License, whose permissions for other licensees extend to the
 entire whole, and thus to each and every part regardless of who wrote
 it.
 
 Thus, it is not the intent of this section to claim rights or contest
 your rights to work written entirely by you; rather, the intent is to
-exercise the right to control the Distributivo of derivative or
+exercise the right to control the distribution of derivative or
 collective works based on the Library.
 
 In addition, mere aggregation of another work not based on the Library
 with the Library (or with a work based on the Library) on a volume of
-a storage or Distributivo medium does not bring the other work under
-the Alcance of this License.
+a storage or distribution medium does not bring the other work under
+the scope of this License.
 
   3. You may opt to apply the terms of the ordinary GNU General Public
 License instead of this License to a given copy of the Library.  To do
@@ -565,7 +565,7 @@ it with the complete corresponding machine-readable source code, which
 must be distributed under the terms of Sections 1 and 2 above on a
 medium customarily used for software interchange.
 
-  If Distributivo of object code is made by offering access to copy
+  If distribution of object code is made by offering access to copy
 from a designated place, then offering equivalent access to copy the
 source code from the same place satisfies the requirement to
 distribute the source code, even though third parties are not
@@ -575,13 +575,13 @@ compelled to copy the source along with the object code.
 Library, but is designed to work with the Library by being compiled or
 linked with it, is called a "work that uses the Library".  Such a
 work, in isolation, is not a derivative work of the Library, and
-therefore falls outside the Alcance of this License.
+therefore falls outside the scope of this License.
 
   However, linking a "work that uses the Library" with the Library
 creates an executable that is a derivative of the Library (because it
 contains portions of the Library), rather than a "work that uses the
 library".  The executable is therefore covered by this License.
-Section 6 states terms for Distributivo of such executables.
+Section 6 states terms for distribution of such executables.
 
   When a "work that uses the Library" uses material from a header file
 that is part of the Library, the object code for the work may be a
@@ -640,9 +640,9 @@ of these things:
     c) Accompany the work with a written offer, valid for at
     least three years, to give the same user the materials
     specified in Subsection 6a, above, for a charge no more
-    than the cost of performing this Distributivo.
+    than the cost of performing this distribution.
 
-    d) If Distributivo of the work is made by offering access to copy
+    d) If distribution of the work is made by offering access to copy
     from a designated place, offer equivalent access to copy the above
     specified materials from the same place.
 
@@ -667,7 +667,7 @@ distribute.
   7. You may place library facilities that are a work based on the
 Library side-by-side in a single library together with other library
 facilities not covered by this License, and distribute such a combined
-library, provided that the separate Distributivo of the work based on
+library, provided that the separate distribution of the work based on
 the Library and of the other library facilities is otherwise
 permitted, and provided that you do these two things:
 
@@ -716,7 +716,7 @@ may not distribute the Library at all.  For example, if a patent
 license would not permit royalty-free redistribution of the Library by
 all those who receive copies directly or indirectly through you, then
 the only way you could satisfy both it and this License would be to
-refrain entirely from Distributivo of the Library.
+refrain entirely from distribution of the Library.
 
 If any portion of this section is held invalid or unenforceable under any
 particular circumstance, the balance of the section is intended to apply,
@@ -725,7 +725,7 @@ and the section as a whole is intended to apply in other circumstances.
 It is not the purpose of this section to induce you to infringe any
 patents or other property right claims or to contest validity of any
 such claims; this section has the sole purpose of protecting the
-integrity of the free software Distributivo system which is
+integrity of the free software distribution system which is
 implemented by public license practices.  Many people have made
 generous contributions to the wide range of software distributed
 through that system in reliance on consistent application of that
@@ -736,18 +736,18 @@ impose that choice.
 This section is intended to make thoroughly clear what is believed to
 be a consequence of the rest of this License.
 
-  12. If the Distributivo and/or use of the Library is restricted in
+  12. If the distribution and/or use of the Library is restricted in
 certain countries either by patents or by copyrighted interfaces, the
 original copyright holder who places the Library under this License may add
-an explicit geographical Distributivo limitation excluding those countries,
-so that Distributivo is permitted only in or among countries not thus
+an explicit geographical distribution limitation excluding those countries,
+so that distribution is permitted only in or among countries not thus
 excluded.  In such case, this License incorporates the limitation as if
 written in the body of this License.
 
   13. The Free Software Foundation may publish revised and/or new
 versions of the Lesser General Public License from time to time.
 Such new versions will be similar in spirit to the present version,
-but may differ in detail to Direccion new problems or concerns.
+but may differ in detail to address new problems or concerns.
 
 Each version is given a distinguishing version number.  If the Library
 specifies a version number of this License which applies to it and
@@ -758,7 +758,7 @@ license version number, you may choose any version ever published by
 the Free Software Foundation.
 
   14. If you wish to incorporate parts of the Library into other free
-programs whose Distributivo conditions are incompatible with these,
+programs whose distribution conditions are incompatible with these,
 write to the author to ask for permission.  For software which is
 copyrighted by the Free Software Foundation, write to the Free
 Software Foundation; we sometimes make exceptions for this.  Our
@@ -800,7 +800,7 @@ Version 1.1
 
 1. Definitions.
 
-     1.0.1. "Commercial Use" means Distributivo or otherwise making the
+     1.0.1. "Commercial Use" means distribution or otherwise making the
      Covered Code available to a third party.
 
      1.1. "Contributor" means each entity that creates or contributes to
@@ -814,7 +814,7 @@ Version 1.1
      combination of the Original Code and Modifications, in each case
      including portions thereof.
 
-     1.4. "Electronic Distributivo Mechanism" means a mechanism generally
+     1.4. "Electronic Distribution Mechanism" means a mechanism generally
      accepted in the software development community for the electronic
      transfer of data.
 
@@ -870,7 +870,7 @@ Version 1.1
      controlled by, or is under common control with You. For purposes of
      this definition, "control" means (a) the power, direct or indirect,
      to cause the direction or management of such entity, whether by
-     Contrato or otherwise, or (b) ownership of more than fifty percent
+     contract or otherwise, or (b) ownership of more than fifty percent
      (50%) of the outstanding shares or beneficial ownership of such
      entity.
 
@@ -935,7 +935,7 @@ Version 1.1
           infringed by Covered Code in the absence of Modifications made by
           that Contributor.
 
-3. Distributivo Obligations.
+3. Distribution Obligations.
 
      3.1. Application of License.
      The Modifications which You create or to which You contribute are
@@ -954,14 +954,14 @@ Version 1.1
      Any Modification which You create or to which You contribute must be
      made available in Source Code form under the terms of this License
      either on the same media as an Executable version or via an accepted
-     Electronic Distributivo Mechanism to anyone to whom you made an
+     Electronic Distribution Mechanism to anyone to whom you made an
      Executable version available; and if made available via Electronic
-     Distributivo Mechanism, must remain available for at least twelve (12)
+     Distribution Mechanism, must remain available for at least twelve (12)
      months after the date it initially became available, or at least six
      (6) months after a subsequent version of that particular Modification
      has been made available to such recipients. You are responsible for
      ensuring that the Source Code version remains available even if the
-     Electronic Distributivo Mechanism is maintained by a third party.
+     Electronic Distribution Mechanism is maintained by a third party.
 
      3.3. Description of Modifications.
      You must cause all Covered Code to which You contribute to contain a
@@ -979,7 +979,7 @@ Version 1.1
           intellectual property rights is required to exercise the rights
           granted by such Contributor under Sections 2.1 or 2.2,
           Contributor must include a text file with the Source Code
-          Distributivo titled "LEGAL" which describes the claim and the
+          distribution titled "LEGAL" which describes the claim and the
           party making the claim in sufficient detail that a recipient will
           know whom to contact. If Contributor obtains such knowledge after
           the Modification is made available as described in Section 3.2,
@@ -1006,23 +1006,23 @@ Version 1.1
      You must duplicate the notice in Exhibit A in each file of the Source
      Code.  If it is not possible to put such notice in a particular Source
      Code file due to its structure, then You must include such notice in a
-     Localizacion (such as a relevant directory) where a user would be likely
+     location (such as a relevant directory) where a user would be likely
      to look for such a notice.  If You created one or more Modification(s)
      You may add your name as a Contributor to the notice described in
      Exhibit A.  You must also duplicate this License in any documentation
      for the Source Code where You describe recipients' rights or ownership
      rights relating to Covered Code.  You may choose to offer, and to
-     charge a fee for, warranty, support, indemnity or Carga
+     charge a fee for, warranty, support, indemnity or liability
      obligations to one or more recipients of Covered Code. However, You
      may do so only on Your own behalf, and not on behalf of the Initial
      Developer or any Contributor. You must make it absolutely clear than
-     any such warranty, support, indemnity or Carga obligation is
+     any such warranty, support, indemnity or liability obligation is
      offered by You alone, and You hereby agree to indemnify the Initial
-     Developer and every Contributor for any Carga incurred by the
+     Developer and every Contributor for any liability incurred by the
      Initial Developer or such Contributor as a result of warranty,
-     support, indemnity or Carga terms You offer.
+     support, indemnity or liability terms You offer.
 
-     3.6. Distributivo of Executable Versions.
+     3.6. Distribution of Executable Versions.
      You may distribute Covered Code in Executable form only if the
      requirements of Section 3.1-3.5 have been met for that Covered Code,
      and if You include a notice stating that the Source Code version of
@@ -1041,7 +1041,7 @@ Version 1.1
      license You must make it absolutely clear that any terms which differ
      from this License are offered by You alone, not by the Initial
      Developer or any Contributor. You hereby agree to indemnify the
-     Initial Developer and every Contributor for any Carga incurred by
+     Initial Developer and every Contributor for any liability incurred by
      the Initial Developer or such Contributor as a result of any such
      terms You offer.
 
@@ -1059,7 +1059,7 @@ Version 1.1
      the terms of this License to the maximum extent possible; and (b)
      describe the limitations and the code they affect. Such description
      must be included in the LEGAL file described in Section 3.4 and must
-     be included with all Distributivos of the Source Code. Except to the
+     be included with all distributions of the Source Code. Except to the
      extent prohibited by statute or regulation, such description must be
      sufficiently detailed for a recipient of ordinary skill to be able to
      understand it.
@@ -1162,10 +1162,10 @@ Version 1.1
      which have been validly granted by You or any distributor hereunder
      prior to termination shall survive termination.
 
-9. LIMITATION OF Carga.
+9. LIMITATION OF LIABILITY.
 
      UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER TORT
-     (INCLUDING NEGLIGENCE), Contrato, OR OTHERWISE, SHALL YOU, THE INITIAL
+     (INCLUDING NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL YOU, THE INITIAL
      DEVELOPER, ANY OTHER CONTRIBUTOR, OR ANY DISTRIBUTOR OF COVERED CODE,
      OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON FOR
      ANY INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY
@@ -1173,7 +1173,7 @@ Version 1.1
      WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER
      COMMERCIAL DAMAGES OR LOSSES, EVEN IF SUCH PARTY SHALL HAVE BEEN
      INFORMED OF THE POSSIBILITY OF SUCH DAMAGES. THIS LIMITATION OF
-     Carga SHALL NOT APPLY TO Carga FOR DEATH OR PERSONAL INJURY
+     LIABILITY SHALL NOT APPLY TO LIABILITY FOR DEATH OR PERSONAL INJURY
      RESULTING FROM SUCH PARTY'S NEGLIGENCE TO THE EXTENT APPLICABLE LAW
      PROHIBITS SUCH LIMITATION. SOME JURISDICTIONS DO NOT ALLOW THE
      EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO
@@ -1206,7 +1206,7 @@ Version 1.1
      without limitation, court costs and reasonable attorneys' fees and
      expenses. The application of the United Nations Convention on
      Contracts for the International Sale of Goods is expressly excluded.
-     Any law or regulation which provides that the language of a Contrato
+     Any law or regulation which provides that the language of a contract
      shall be construed against the drafter shall not apply to this
      License.
 
@@ -1217,7 +1217,7 @@ Version 1.1
      out of its utilization of rights under this License and You agree to
      work with Initial Developer and Contributors to distribute such
      responsibility on an equitable basis. Nothing herein is intended or
-     shall be deemed to constitute any admission of Carga.
+     shall be deemed to constitute any admission of liability.
 
 13. MULTIPLE-LICENSED CODE.
 

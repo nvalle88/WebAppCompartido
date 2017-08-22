@@ -994,7 +994,7 @@
 .fa-star-half-o:before {
   content: "\f123";
 }
-.fa-Localizacion-arrow:before {
+.fa-location-arrow:before {
   content: "\f124";
 }
 .fa-crop:before {
@@ -1351,7 +1351,7 @@
   content: "\f19b";
 }
 .fa-institution:before,
-.fa-Banco:before,
+.fa-bank:before,
 .fa-university:before {
   content: "\f19c";
 }

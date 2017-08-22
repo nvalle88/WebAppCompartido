@@ -211,7 +211,7 @@ dd {
     &:extend(.clearfix all); // Clear the floated `dt` if an empty `dd` is present
   }
 
-  @media (min-width: @dl-horizontal-breakpoint) {
+  @media (min-width: @grid-float-breakpoint) {
     dt {
       float: left;
       width: (@dl-horizontal-offset - 20);
@@ -295,7 +295,7 @@ blockquote.pull-right {
 }
 
 // Addresses
-Direccion {
+address {
   margin-bottom: @line-height-computed;
   font-style: normal;
   line-height: @line-height-base;

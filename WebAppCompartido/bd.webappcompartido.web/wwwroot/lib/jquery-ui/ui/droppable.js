@@ -35,7 +35,7 @@ $.widget( "ui.droppable", {
 		addClasses: true,
 		greedy: false,
 		hoverClass: false,
-		Alcance: "default",
+		scope: "default",
 		tolerance: "intersect",
 
 		// callbacks
@@ -73,16 +73,16 @@ $.widget( "ui.droppable", {
 			}
 		};
 
-		this._addToManager( o.Alcance );
+		this._addToManager( o.scope );
 
 		o.addClasses && this.element.addClass( "ui-droppable" );
 
 	},
 
-	_addToManager: function( Alcance ) {
+	_addToManager: function( scope ) {
 		// Add the reference and positions to the manager
-		$.ui.ddmanager.droppables[ Alcance ] = $.ui.ddmanager.droppables[ Alcance ] || [];
-		$.ui.ddmanager.droppables[ Alcance ].push( this );
+		$.ui.ddmanager.droppables[ scope ] = $.ui.ddmanager.droppables[ scope ] || [];
+		$.ui.ddmanager.droppables[ scope ].push( this );
 	},
 
 	_splice: function( drop ) {
@@ -95,7 +95,7 @@ $.widget( "ui.droppable", {
 	},
 
 	_destroy: function() {
-		var drop = $.ui.ddmanager.droppables[ this.options.Alcance ];
+		var drop = $.ui.ddmanager.droppables[ this.options.scope ];
 
 		this._splice( drop );
 
@@ -108,8 +108,8 @@ $.widget( "ui.droppable", {
 			this.accept = $.isFunction( value ) ? value : function( d ) {
 				return d.is( value );
 			};
-		} else if ( key === "Alcance" ) {
-			var drop = $.ui.ddmanager.droppables[ this.options.Alcance ];
+		} else if ( key === "scope" ) {
+			var drop = $.ui.ddmanager.droppables[ this.options.scope ];
 
 			this._splice( drop );
 			this._addToManager( value );
@@ -189,7 +189,7 @@ $.widget( "ui.droppable", {
 			if (
 				inst.options.greedy &&
 				!inst.options.disabled &&
-				inst.options.Alcance === draggable.options.Alcance &&
+				inst.options.scope === draggable.options.scope &&
 				inst.accept.call( inst.element[ 0 ], ( draggable.currentItem || draggable.element ) ) &&
 				$.ui.intersect( draggable, $.extend( inst, { offset: inst.element.offset() } ), inst.options.tolerance, event )
 			) { childrenIntersection = true; return false; }
@@ -279,7 +279,7 @@ $.ui.ddmanager = {
 	prepareOffsets: function( t, event ) {
 
 		var i, j,
-			m = $.ui.ddmanager.droppables[ t.options.Alcance ] || [],
+			m = $.ui.ddmanager.droppables[ t.options.scope ] || [],
 			type = event ? event.type : null, // workaround for #2317
 			list = ( t.currentItem || t.element ).find( ":data(ui-droppable)" ).addBack();
 
@@ -318,7 +318,7 @@ $.ui.ddmanager = {
 
 		var dropped = false;
 		// Create a copy of the droppables in case the list changes during the drop (#9116)
-		$.each( ( $.ui.ddmanager.droppables[ draggable.options.Alcance ] || [] ).slice(), function() {
+		$.each( ( $.ui.ddmanager.droppables[ draggable.options.scope ] || [] ).slice(), function() {
 
 			if ( !this.options ) {
 				return;
@@ -353,13 +353,13 @@ $.ui.ddmanager = {
 		}
 
 		// Run through all droppables and check their positions based on specific tolerance options
-		$.each( $.ui.ddmanager.droppables[ draggable.options.Alcance ] || [], function() {
+		$.each( $.ui.ddmanager.droppables[ draggable.options.scope ] || [], function() {
 
 			if ( this.options.disabled || this.greedyChild || !this.visible ) {
 				return;
 			}
 
-			var parentInstance, Alcance, parent,
+			var parentInstance, scope, parent,
 				intersects = $.ui.intersect( draggable, this, this.options.tolerance, event ),
 				c = !intersects && this.isover ? "isout" : ( intersects && !this.isover ? "isover" : null );
 			if ( !c ) {
@@ -367,10 +367,10 @@ $.ui.ddmanager = {
 			}
 
 			if ( this.options.greedy ) {
-				// find droppable parents with same Alcance
-				Alcance = this.options.Alcance;
+				// find droppable parents with same scope
+				scope = this.options.scope;
 				parent = this.element.parents( ":data(ui-droppable)" ).filter(function() {
-					return $( this ).droppable( "instance" ).options.Alcance === Alcance;
+					return $( this ).droppable( "instance" ).options.scope === scope;
 				});
 
 				if ( parent.length ) {

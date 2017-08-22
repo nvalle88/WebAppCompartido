@@ -28,7 +28,7 @@ CKEDITOR.stylesSet.add( 'default', [
 	{ name: 'Heading 5',		element: 'h5' },
 	{ name: 'Heading 6',		element: 'h6' },
 	{ name: 'Preformatted Text',element: 'pre' },
-	{ name: 'Direccion',			element: 'Direccion' },
+	{ name: 'Address',			element: 'address' },
 	*/
 
 	{ name: 'Italic Title',		element: 'h2', styles: { 'font-style': 'italic' } },

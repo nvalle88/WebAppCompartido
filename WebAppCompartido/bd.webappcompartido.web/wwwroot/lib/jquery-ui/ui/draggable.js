@@ -44,7 +44,7 @@ $.widget("ui.draggable", $.ui.mouse, {
 		refreshPositions: false,
 		revert: false,
 		revertDuration: 500,
-		Alcance: "default",
+		scope: "default",
 		scroll: true,
 		scrollSensitivity: 20,
 		scrollSpeed: 20,
@@ -836,7 +836,7 @@ $.ui.plugin.add( "draggable", "connectToSortable", {
 					draggable.dropped = sortable.element;
 
 					// Need to refreshPositions of all sortables in the case that
-					// adding to one sortable changes the Localizacion of the other sortables (#9675)
+					// adding to one sortable changes the location of the other sortables (#9675)
 					$.each( draggable.sortables, function() {
 						this.refreshPositions();
 					});
@@ -891,7 +891,7 @@ $.ui.plugin.add( "draggable", "connectToSortable", {
 					draggable.dropped = false;
 
 					// Need to refreshPositions of all sortables just in case removing
-					// from one sortable changes the Localizacion of other sortables (#9675)
+					// from one sortable changes the location of other sortables (#9675)
 					$.each( draggable.sortables, function() {
 						this.refreshPositions();
 					});

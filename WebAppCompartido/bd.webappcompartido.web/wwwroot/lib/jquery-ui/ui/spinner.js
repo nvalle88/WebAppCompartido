@@ -150,8 +150,8 @@ return $.widget( "ui.spinner", {
 			previous = this.element[0] === this.document[0].activeElement ?
 				this.previous : this.element.val();
 			function checkFocus() {
-				var esActivo = this.element[0] === this.document[0].activeElement;
-				if ( !esActivo ) {
+				var isActive = this.element[0] === this.document[0].activeElement;
+				if ( !isActive ) {
 					this.element.focus();
 					this.previous = previous;
 					// support: IE

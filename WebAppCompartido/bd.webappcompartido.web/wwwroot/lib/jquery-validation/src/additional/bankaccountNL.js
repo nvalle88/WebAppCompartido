@@ -1,5 +1,5 @@
 /*
- * Dutch Banco account numbers (not 'giro' numbers) have 9 digits
+ * Dutch bank account numbers (not 'giro' numbers) have 9 digits
  * and pass the '11 check'.
  * We accept the notation with spaces, as that is common.
  * acceptable: 123456789 or 12 34 56 789
@@ -22,4 +22,4 @@ $.validator.addMethod("bankaccountNL", function(value, element) {
 		sum = sum + factor * digit;
 	}
 	return sum % 11 === 0;
-}, "Please specify a valid Banco account number");
+}, "Please specify a valid bank account number");

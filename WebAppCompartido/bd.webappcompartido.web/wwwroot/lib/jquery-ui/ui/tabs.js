@@ -53,7 +53,7 @@ return $.widget( "ui.tabs", {
 			anchor = anchor.cloneNode( false );
 
 			anchorUrl = anchor.href.replace( rhash, "" );
-			locationUrl = Localizacion.href.replace( rhash, "" );
+			locationUrl = location.href.replace( rhash, "" );
 
 			// decoding may throw an error if the URL isn't UTF-8 (#9518)
 			try {
@@ -107,7 +107,7 @@ return $.widget( "ui.tabs", {
 	_initialActive: function() {
 		var active = this.options.active,
 			collapsible = this.options.collapsible,
-			locationHash = Localizacion.hash.substring( 1 );
+			locationHash = location.hash.substring( 1 );
 
 		if ( active === null ) {
 			// check the fragment identifier in the URL
